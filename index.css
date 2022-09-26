@@ -1,0 +1,106 @@
+body{
+    background-color: #92D1B3;
+    font-family: 'Segoe UI';
+    color:white;
+    line-height: 5px;
+    text-shadow:1px 1px 10px #80bc9f, 1px 1px 10px rgb(140, 138, 138,0.2);
+}
+.container{
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: [first] 1fr [line2] 1fr [line3] 1fr [col4-start] 1fr [five] 1fr [six]1fr [end];
+    grid-template-rows: [row1-start] 1fr [row1-end] 3.9fr [third-line] 3.9fr [fourth-line]1fr[last-line];
+
+}
+.header{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding-left: 20px;
+    line-height: 5px;
+    color:#fff;
+    text-shadow:1px 1px 10px #65957e, 1px 1px 10px rgb(217, 214, 214);
+}
+.middle{
+    grid-column: first / end;
+    grid-row: row1-end / fourth-line;
+    display: flex;
+    flex-flow: row;
+    justify-content:center;
+    align-items: center;
+    column-gap: 300px;
+    
+}
+.measure{
+    font-size: 12px;
+}
+.middle.image{
+
+    flex-grow: 4;
+}
+.middle.image.image2{
+    height: 100px;
+    width: 100px;
+}
+.footer{
+    display: flex;
+    grid-row: fourth-line / last-line;
+    grid-column: first / line2;
+    padding-left: 3vh;
+   justify-content:left;
+
+}
+.footer div{
+
+    word-wrap:normal;
+    font-size: 12px;
+    text-align: left;
+    transform: rotate(-90deg);
+} 
+.stats{
+    display: flex;
+    flex-direction: column;
+    width: 50vh;
+    
+}
+.stats #attribute{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+}
+.stats #attribute div{
+    background-color: white;
+    border-radius: 100%;
+    box-shadow: 1px 1px 10px #80bc9f, 1px 1px 10px rgba(58, 57, 57, 0.2);
+
+}
+.stats #carac{
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+    border-left: 3px solid rgb(255, 255, 255,0.5);
+    padding: 10px;
+}
+.stats #carac #sta {
+    border-radius:8px;
+    padding-top: 0;
+    padding-left:10px;
+    padding-right: 10px;
+    background-color: white;
+    color: black;
+    font-size: 9px;
+    text-align: center;
+    text-shadow: none;
+    font-weight:520;
+    box-shadow: 1px 1px 10px #80bc9f, 1px 1px 10px rgba(39, 38, 38, 0.2);
+    
+}
+.watermark{
+    position: absolute;
+    right: 40.5%;
+    bottom: 58.5%;
+    transform: translate(-50%, -50%);
+    color: rgb(17, 17, 17,0.35);
+    font-weight: bold;
+    font-size: 80px;
+}
